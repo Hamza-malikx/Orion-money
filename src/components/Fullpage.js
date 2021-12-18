@@ -71,7 +71,7 @@ const Fullpage = () => {
               <div className="block">
                 <div className="form-block">
                   <h2>How much can I earn?</h2>
-                  <form action="//app.orion.money">
+                  <form>
                     <dl>
                       <dt>
                         <select
@@ -147,34 +147,36 @@ const Fullpage = () => {
                           <h1>{`${values} Year`}</h1>
                           <br />
                           <br />
-                          <div
-                            className="ranger"
-                            {...getTrackProps({
-                              style: {
-                                height: "4px",
-                                background: "#ddd",
-                                boxShadow: "inset 0 1px 2px rgba(0,0,0,.6)",
-                                borderRadius: "2px",
-                                marginBotton: "20px",
-                              },
-                            })}
-                          >
-                            {handles.map(({ getHandleProps }) => (
-                              <button
-                                // onChange={handleChange(values)}
-                                {...getHandleProps({
-                                  style: {
-                                    width: "100%",
-                                    height: "14px",
-                                    outline: "none",
-                                    borderRadius: "100%",
-                                    background:
-                                      "linear-gradient(to bottom, #eee 45%, #ddd 55%)",
-                                    border: "solid 1px #525569",
-                                  },
-                                })}
-                              />
-                            ))}
+                          <div className="yu">
+                            <div
+                              className="ranger"
+                              {...getTrackProps({
+                                style: {
+                                  height: "4px",
+                                  background: "#ddd",
+                                  boxShadow: "inset 0 1px 2px rgba(0,0,0,.6)",
+                                  borderRadius: "2px",
+                                  marginBotton: "20px",
+                                },
+                              })}
+                            >
+                              {handles.map(({ getHandleProps }) => (
+                                <button
+                                  // onChange={handleChange(values)}
+                                  {...getHandleProps({
+                                    style: {
+                                      width: "100%",
+                                      height: "14px",
+                                      outline: "none",
+                                      borderRadius: "100%",
+                                      background:
+                                        "linear-gradient(to bottom, #eee 45%, #ddd 55%)",
+                                      border: "solid 1px #525569",
+                                    },
+                                  })}
+                                />
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </dt>

@@ -161,37 +161,41 @@ const Fullpage = () => {
                       </dd>
                     </dl>
                     <dl>
-                      <div className="holder">
-                        <h1>Basic Range</h1>
-                        <br />
-                        <br />
-                        <div
-                          {...getTrackProps({
-                            style: {
-                              height: "4px",
-                              background: "#ddd",
-                              boxShadow: "inset 0 1px 2px rgba(0,0,0,.6)",
-                              borderRadius: "2px",
-                            },
-                          })}
-                        >
-                          {handles.map(({ getHandleProps }) => (
-                            <button
-                              {...getHandleProps({
-                                style: {
-                                  width: "14px",
-                                  height: "14px",
-                                  outline: "none",
-                                  borderRadius: "100%",
-                                  background:
-                                    "linear-gradient(to bottom, #eee 45%, #ddd 55%)",
-                                  border: "solid 1px #525569",
-                                },
-                              })}
-                            />
-                          ))}
+                      <dt>
+                        <div className="holder">
+                          <h1>Basic Range</h1>
+                          <br />
+                          <br />
+                          <div
+                            className="ranger"
+                            {...getTrackProps({
+                              style: {
+                                height: "4px",
+                                background: "#ddd",
+                                boxShadow: "inset 0 1px 2px rgba(0,0,0,.6)",
+                                borderRadius: "2px",
+                                marginBotton: "20px",
+                              },
+                            })}
+                          >
+                            {handles.map(({ getHandleProps }) => (
+                              <button
+                                {...getHandleProps({
+                                  style: {
+                                    width: "100%",
+                                    height: "14px",
+                                    outline: "none",
+                                    borderRadius: "100%",
+                                    background:
+                                      "linear-gradient(to bottom, #eee 45%, #ddd 55%)",
+                                    border: "solid 1px #525569",
+                                  },
+                                })}
+                              />
+                            ))}
+                          </div>
                         </div>
-                      </div>
+                      </dt>
 
                       <dd id="total">
                         <p>

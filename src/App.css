@@ -1,9 +1,9 @@
-.holder {
+/* .holder {
   padding-right: 40px;
 }
 #total {
   margin-left: 60px;
-}
+} */
 .dropdownMenu {
   border: none;
   border-bottom: 1px solid #525569;
@@ -31,3 +31,14 @@
   background: #5f9698 !important;
   cursor: pointer !important;
 }
+.ranger {
+  margin-bottom: 20px;
+}
+/* @media screen and (max-width: 900px) {
+  .holder {
+    padding-right: 0%;
+  }
+  #total {
+    margin-left: 2%;
+  }
+} */

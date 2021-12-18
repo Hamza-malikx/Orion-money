@@ -7,7 +7,6 @@ import Oriontoken from "./sections/Oriontoken";
 import OurInvestors from "./sections/OurInvestors";
 import Ourpartners from "./sections/Ourpartners";
 import { useRanger } from "react-ranger";
-import img1 from "../img.PNG";
 const Fullpage = () => {
   const [values, setValues] = useState([1]);
   const [cd, setcd] = useState([10000]);
@@ -137,7 +136,7 @@ const Fullpage = () => {
                     <dl>
                       <dt>
                         <div className="holder">
-                          <h1>{`${values} Year`}</h1>
+                          <h1 className="yearHeader">{`${values}`} Year</h1>
                           <br />
                           <br />
                           <div className="yu">
@@ -145,9 +144,9 @@ const Fullpage = () => {
                               className="ranger"
                               {...getTrackProps({
                                 style: {
-                                  height: "4px",
-                                  background: "#ddd",
-                                  boxShadow: "inset 0 1px 2px rgba(0,0,0,.6)",
+                                  height: "1px",
+                                  width: "210px",
+                                  background: " #525569",
                                   borderRadius: "2px",
                                   marginBotton: "20px",
                                 },

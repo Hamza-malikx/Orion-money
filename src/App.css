@@ -9,12 +9,15 @@
   border-bottom: 1px solid #525569;
   display: block;
   padding: 0 0 10px;
-  width: 100%;
+  width: 93%;
   background: transparent;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: #fff;
+}
+.summ {
+  width: 93% !important;
 }
 .dropdownMenu option {
   background-color: #525569;
@@ -24,7 +27,6 @@
   color: #fff;
 }
 .holder {
-  padding: 9px 0 9px 15px !important;
 }
 .holder button {
   border: 0 !important;
@@ -36,18 +38,11 @@
 }
 .yu {
   width: 90%;
+  padding: 9px 0 9px 15px !important;
 }
 .ranger {
   margin-bottom: 20px;
 }
-/* @media screen and (max-width: 900px) {
-  .holder {
-    padding-right: 0%;
-  }
-  #total {
-    margin-left: 2%;
-  }
-} */
 .container::before {
   background: transparent !important;
 }
@@ -96,4 +91,12 @@
 .wrap {
   display: flex;
   flex-direction: row;
+}
+.yearHeader {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  float: left;
+  margin-top: -1px;
 }

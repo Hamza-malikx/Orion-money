@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import About from "./sections/About";
 import Apylevel from "./sections/Apylevel";
 import Earlysupporters from "./sections/Earlysupporters";
@@ -7,24 +7,34 @@ import Oriontoken from "./sections/Oriontoken";
 import OurInvestors from "./sections/OurInvestors";
 import Ourpartners from "./sections/Ourpartners";
 import { useRanger } from "react-ranger";
-
+import img1 from "../img.PNG";
 const Fullpage = () => {
-  const [values, setValues] = useState([10]);
-
+  const [values, setValues] = useState([1]);
+  const [cd, setcd] = useState([1]);
+  const setVal = 10000;
+  const ab = 2200;
+  const xy = ab * values;
+  // const handleChange = (vale) => {
+  //   console.log("XXXX", vale);
+  //   if (vale == 2) {
+  //     setIntEarned("4400");
+  //   }
+  // };
+  const setXX = (e) => {
+    console.log(cd);
+    setcd(e.target.value);
+    console.log("XXX", cd);
+  };
   const { getTrackProps, handles } = useRanger({
-    min: 0,
-    max: 100,
+    min: 1,
+    max: 6,
     stepSize: 1,
     values,
     onChange: setValues,
   });
-
-  // let [value, setValue] = useState([10]);
-  // const handleChange = () => {
-  //   setValue((value) => {
-  //     return value++;
-  //   });
-  // };
+  // useEffect(() => {
+  //   handleChange();
+  // }, []);
   return (
     <>
       <div
@@ -32,6 +42,10 @@ const Fullpage = () => {
         data-anchor="anchor1"
         style={{ height: "150px" }}
       >
+        <a href="#block-01" className="ab">
+          <img src="img/scroll-down-icon.svg" alt="" />
+          Scroll down
+        </a>
         <div className="fp-tableCell" style={{ height: "150px" }}>
           <div className="content">
             <div className="main">
@@ -53,51 +67,13 @@ const Fullpage = () => {
                   </p>
                 </div>
               </div>
+
               <div className="block">
                 <div className="form-block">
                   <h2>How much can I earn?</h2>
                   <form action="//app.orion.money">
                     <dl>
                       <dt>
-                        {/* <span
-                          className="select2 select2-container select2-container--default"
-                          dir="ltr"
-                          data-select2-id="select2-data-2-8w61"
-                          style={{ width: "24px" }}
-                        >
-                          <span className="selection">
-                            <span
-                              className="select2-selection select2-selection--single"
-                              role="combobox"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                              tabindex="0"
-                              aria-disabled="false"
-                              aria-labelledby="select2-select-gd-container"
-                              aria-controls="select2-select-gd-container"
-                            >
-                              <span
-                                className="select2-selection__rendered"
-                                id="select2-select-gd-container"
-                                role="textbox"
-                                aria-readonly="true"
-                                title="USDT"
-                              >
-                                USDT
-                              </span>
-                              <span
-                                className="select2-selection__arrow"
-                                role="presentation"
-                              >
-                                <b role="presentation"></b>
-                              </span>
-                            </span>
-                          </span>
-                          <span
-                            className="dropdown-wrapper"
-                            aria-hidden="true"
-                          ></span>
-                        </span> */}
                         <select
                           name="select"
                           className="drop dropdownMenu"
@@ -147,15 +123,20 @@ const Fullpage = () => {
                         <input
                           id="summ"
                           type="text"
-                          value={values}
+                          value={cd}
                           className="summ"
+                          onChange={(e) => {
+                            setXX(e);
+                          }}
                         />
                         <small>Amount</small>
                       </dt>
                       <dd id="interest_crypto">
                         <p>
                           <span className="symbol">USDT</span>
-                          <span className="amount">2,000</span>
+                          <span className="amount">
+                            {values == 1 ? 2000 : xy}
+                          </span>
                         </p>
                         <small>Interest Earned</small>
                       </dd>
@@ -163,7 +144,7 @@ const Fullpage = () => {
                     <dl>
                       <dt>
                         <div className="holder">
-                          <h1>Basic Range</h1>
+                          <h1>{`${values} Year`}</h1>
                           <br />
                           <br />
                           <div
@@ -180,6 +161,7 @@ const Fullpage = () => {
                           >
                             {handles.map(({ getHandleProps }) => (
                               <button
+                                // onChange={handleChange(values)}
                                 {...getHandleProps({
                                   style: {
                                     width: "100%",
@@ -200,7 +182,9 @@ const Fullpage = () => {
                       <dd id="total">
                         <p>
                           <span className="symbol">USDT</span>
-                          <span className="amount">12,000</span>
+                          <span className="amount">
+                            {values == 1 ? cd : setVal + xy}
+                          </span>
                         </p>
                         <small>Total</small>
                       </dd>

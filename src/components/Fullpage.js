@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import About from "./sections/About";
 import Apylevel from "./sections/Apylevel";
 import Earlysupporters from "./sections/Earlysupporters";
@@ -14,16 +14,8 @@ const Fullpage = () => {
   const setVal = 10000;
   const ab = 2200;
   const xy = ab * values;
-  // const handleChange = (vale) => {
-  //   console.log("XXXX", vale);
-  //   if (vale == 2) {
-  //     setIntEarned("4400");
-  //   }
-  // };
   const setXX = (e) => {
-    console.log(cd);
     setcd(e.target.value);
-    console.log("XXX", cd);
   };
   const { getTrackProps, handles } = useRanger({
     min: 1,
@@ -32,9 +24,6 @@ const Fullpage = () => {
     values,
     onChange: setValues,
   });
-  // useEffect(() => {
-  //   handleChange();
-  // }, []);
   return (
     <>
       <div

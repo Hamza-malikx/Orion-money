@@ -1,0 +1,33 @@
+.holder {
+  padding-right: 40px;
+}
+#total {
+  margin-left: 60px;
+}
+.dropdownMenu {
+  border: none;
+  border-bottom: 1px solid #525569;
+  display: block;
+  padding: 0 0 10px;
+  width: 100%;
+  background: transparent;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+.dropdownMenu option {
+  background-color: #525569;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+.holder button {
+  border: 0 !important;
+  border-radius: 100% !important;
+  width: 25px !important;
+  height: 25px !important;
+  background: #5f9698 !important;
+  cursor: pointer !important;
+}

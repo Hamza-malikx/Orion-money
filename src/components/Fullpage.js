@@ -10,7 +10,7 @@ import { useRanger } from "react-ranger";
 import img1 from "../img.PNG";
 const Fullpage = () => {
   const [values, setValues] = useState([1]);
-  const [cd, setcd] = useState([1]);
+  const [cd, setcd] = useState([10000]);
   const setVal = 10000;
   const ab = 2200;
   const xy = ab * values;
@@ -71,7 +71,11 @@ const Fullpage = () => {
               <div className="block">
                 <div className="form-block">
                   <h2>How much can I earn?</h2>
-                  <form>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                    }}
+                  >
                     <dl>
                       <dt>
                         <select

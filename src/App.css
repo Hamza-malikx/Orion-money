@@ -53,8 +53,15 @@
 }
 .ab {
   position: absolute;
-  top: 84%;
-  left: 60px;
+  top: 90%;
+  left: 5%;
+}
+@media screen and (max-width: 1920px) and (min-width: 1440px) {
+  .ab {
+    position: absolute;
+    top: 90%;
+    left: 11%;
+  }
 }
 .ab img {
   width: 40px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./header.module.css";
 const Header = () => {
   const [hamburger, setHamburger] = useState("false");
@@ -9,9 +9,33 @@ const Header = () => {
       setHamburger("true");
     }
   };
+  const [header, setHeader] = useState("header");
+
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 73) {
+      // document.getElementById("block-05").style.height = "400px";
+      document.getElementById("block-05").style.background = "transparent";
+      document.getElementById("block-05").style.transition = " all 1s ease-out";
+      document.getElementById("block-05").style.paddingTop = " 10px";
+      document.getElementById("block-05").style.paddingBottom = " 10px";
+      return setHeader("header");
+    } else if (window.scrollY > 70) {
+      console.log(document.getElementById("block-05").style.height);
+      document.getElementById("block-05").style.height = "400px !important";
+      document.getElementById("block-05").style.background = "#272a43";
+      document.getElementById("block-05").style.paddingTop = " 0px";
+      document.getElementById("block-05").style.paddingBottom = " 0px";
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
   return (
     <>
-      <header className="header small" id="block-05">
+      <header className={`${header} small`} id="block-05">
         <div className="container">
           <div className="slicknav_menu">
             <label

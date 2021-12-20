@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import About from "./sections/About";
 import Apylevel from "./sections/Apylevel";
 import Earlysupporters from "./sections/Earlysupporters";
@@ -23,6 +23,49 @@ const Fullpage = () => {
     values,
     onChange: setValues,
   });
+  const [select, setSelect] = useState("impDivSelect");
+  const [xy1, setXy1] = useState(false);
+  const changeSelect = () => {
+    // const xy = true;
+    if (xy1 === false) {
+      setXy1(true);
+    } else {
+      setXy1(false);
+    }
+    if (xy1 === false) {
+      setSelect("impDivSelect1");
+    } else {
+      setSelect("impDivSelect");
+    }
+    // console.log(xy1);
+
+    // console.log(select);
+  };
+  const data = [
+    { id: "1", h: "Tether ", p: "USDT" },
+    { id: "2", h: "USD Coin ", p: "USDC" },
+    { id: "3", h: "Binance USD ", p: "BUSD" },
+    { id: "4", h: "DAI ", p: "DAI" },
+    { id: "5", h: "UST ", p: "UST" },
+  ];
+  const passingVal = (eab) => {
+    console.log("XXX", eab);
+  };
+  const passingVal1 = (eab) => {
+    console.log("XXX", eab);
+  };
+  const passingVal2 = (eab) => {
+    console.log("XXX", eab);
+  };
+  const passingVal3 = (eab) => {
+    console.log("XXX", eab);
+  };
+  const passingVal4 = (eab) => {
+    console.log("XXX", eab);
+  };
+  // useEffect(() => {
+  //   passingVal();
+  // }, [value]);
   return (
     <>
       <div
@@ -31,8 +74,14 @@ const Fullpage = () => {
         style={{ height: "150px" }}
       >
         <a href="#block-01" className="ab">
-          <img src="img/scroll-down-icon.svg" alt="" />
-          Scroll down
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div>
+              <img src="img/scroll-down-icon.svg" alt="" />
+            </div>
+            <div>
+              <p>Scroll down</p>
+            </div>
+          </div>
         </a>
         <div className="fp-tableCell" style={{ height: "150px" }}>
           <div className="content">
@@ -66,44 +115,108 @@ const Fullpage = () => {
                   >
                     <dl>
                       <dt>
-                        <select
-                          name="select"
+                        {/* <input type="select" onclick={changeSelect}></input> */}
+                        <span
                           className="drop dropdownMenu"
-                          data-select2-id="select2-data-1-fdxy"
-                          tabindex="-1"
-                          aria-hidden="true"
+                          onClick={changeSelect}
                         >
-                          <option
-                            value="1"
-                            data-select2-id="select2-data-3-w0be"
+                          USDT
+                          <div
+                            className={
+                              xy1 === false ? "impDivSelect" : "impDivSelect1"
+                            }
                           >
-                            USDT
-                          </option>
-                          <option
-                            value="2"
-                            data-select2-id="select2-data-4-mnn7"
-                          >
-                            USDC
-                          </option>
-                          <option
-                            value="2"
-                            data-select2-id="select2-data-5-xrzb"
-                          >
-                            BUSD
-                          </option>
-                          <option
-                            value="3"
-                            data-select2-id="select2-data-6-j16d"
-                          >
-                            DAI
-                          </option>
-                          <option
-                            value="4"
-                            data-select2-id="select2-data-7-jshi"
-                          >
-                            UST
-                          </option>
-                        </select>
+                            {/* <ul
+                              class="list-unstyled"
+                              // onClick={passingVal(data)}
+                            >
+                              {value.map((val, index) => (
+                                <li
+                                  key={val.id}
+                                  // data-value="value 1"
+                                >
+                                  <div
+                                    onClick={passingVal(val, index)}
+                                    className="wda"
+                                    style={{
+                                      display: "flex",
+                                      justifyContent: "space-between",
+                                    }}
+                                  >
+                                    <h5>{val.h}</h5>
+                                    <p>{val.p}</p>
+                                  </div>
+                                </li>
+                              ))}
+                            </ul> */}
+                            <ul class="list-unstyled">
+                              <li onClick={passingVal("USDT")}>
+                                <div
+                                  className="wda"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                  }}
+                                >
+                                  <h5>Tether</h5>
+                                  <p>USDT</p>
+                                </div>
+                              </li>
+                              <li onClick={passingVal1("USDC")}>
+                                <div
+                                  className="wda"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                  }}
+                                >
+                                  <h5>USD Coin</h5>
+                                  <p>USDC</p>
+                                </div>
+                              </li>
+                              <li onClick={passingVal2("BUSD")}>
+                                <div
+                                  className="wda"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                  }}
+                                >
+                                  <h5>Binance USD</h5>
+                                  <p>BUSD</p>
+                                </div>
+                              </li>
+                              <li onClick={passingVal3("DAI")}>
+                                <div
+                                  className="wda"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                  }}
+                                >
+                                  <h5>DAI</h5>
+                                  <p>DAI</p>
+                                </div>
+                              </li>
+                              <li
+                                data-value="value 1"
+                                onClick={passingVal4("UST")}
+                              >
+                                <div
+                                  className="wda"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                  }}
+                                >
+                                  <h5>UST</h5>
+                                  <p>UST</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </span>
+
                         <small>Your Stablecoin</small>
                       </dt>
                       <dd style={{ display: "none" }}>

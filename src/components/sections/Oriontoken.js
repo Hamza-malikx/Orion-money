@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../quickswap-logo.png";
 import img2 from "../../CoinMarketCap.png";
 import img3 from "../../CoinGecko.png";
 const Oriontoken = () => {
@@ -18,29 +19,28 @@ const Oriontoken = () => {
           <span className="orion-token-trade">Trade $ORION on:</span>
           {/* <embed src="./img/trade/trade-lines.svg" className="orion-token-lines"/> */}
           <div className="Wrapper">
-            <div>
+            <div className="azab">
               <svg
-                className="design"
                 xmlns="http://www.w3.org/2000/svg"
-                width="60"
+                width="571"
                 height="363"
-                viewBox="0 0 60 363"
+                viewBox="0 0 571 60"
                 fill="none"
               >
                 <path
-                  d="M1.5 183H37.5M37.5 183V6C37.5 3.79086 39.2909 2 41.5 2H58M37.5 183V244M58 361H41.5C39.2909 361 37.5 359.209 37.5 357V244M37.5 244H58M37.5 113H58"
-                  stroke="url(#paint0_linear_3301:6020)"
+                  d="M285 1.99999L285 38M285 38L285 58.5M285 38L143.75 38M285 38L565 38C567.209 38 569 39.7909 569 42L569 58.5M2 58.5L2 42C2 39.7908 3.79086 38 6 38L143.75 38M427.25 38L427.25 58.5M143.75 38L143.75 58.5"
+                  stroke="url(#paint0_linear_3301_6020)"
                   stroke-opacity="0.1"
                   stroke-width="3"
                   stroke-linecap="round"
                 />
                 <defs>
                   <linearGradient
-                    id="paint0_linear_3301:6020"
-                    x1="2.00001"
-                    y1="183"
-                    x2="29.8535"
-                    y2="185.02"
+                    id="paint0_linear_3301_6020"
+                    x1="324"
+                    y1="2.49999"
+                    x2="321.98"
+                    y2="30.3535"
                     gradientUnits="userSpaceOnUse"
                   >
                     <stop stop-color="#FFD600" />
@@ -112,15 +112,39 @@ const Oriontoken = () => {
                       </defs>
                     </svg>
                   </span>{" "}
-                  <a
-                    id="linkFour"
-                    href="https://app.terraswap.io/#Swap"
-                    target="_blank"
-                    className="orion-token-link"
-                  >
-                    <img src="./img/trade/terraswap-logo.svg" />
-                    <span className="link-name">TerraSwap</span>
-                  </a>
+                  <div style={{ display: "flex" }}>
+                    <div>
+                      <a
+                        id="linkFour"
+                        href="https://app.terraswap.io/#Swap"
+                        target="_blank"
+                        className="orion-token-link"
+                      >
+                        <img src="./img/trade/terraswap-logo.svg" />
+                        <span className="link-name">TerraSwap</span>
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        id="linkFive"
+                        href="https://quickswap.exchange/#/swap?outputCurrency=0x5E0294Af1732498C77F8dB015a2d52a76298542B&amp;inputCurrency=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="orion-token-link"
+                      >
+                        <div
+                          style={{ display: "flex", flexDirection: "column" }}
+                        >
+                          <div>
+                            <img src={img} class="orion-token-link-image" />
+                          </div>
+                          <div>
+                            <span class="link-name">QuickSwap</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

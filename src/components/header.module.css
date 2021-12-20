@@ -136,10 +136,12 @@ label span {
   text-align: center;
   text-decoration: none;
 }
-
-.wrapperItems a:hover {
+.wrapperItems a:hover,
+.wrapperItems a:active,
+.wrapperItems a:visited {
   background-color: transparent;
   transition: ease-in-out 1s;
+  color: #fff;
 }
 
 .headerWrapper ul .navItems a:last-child {

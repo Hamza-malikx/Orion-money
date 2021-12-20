@@ -7,6 +7,9 @@ import Oriontoken from "./sections/Oriontoken";
 import OurInvestors from "./sections/OurInvestors";
 import Ourpartners from "./sections/Ourpartners";
 import { useRanger } from "react-ranger";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import "./bb.css";
 const Fullpage = () => {
   const [values, setValues] = useState([1]);
   const [cd, setcd] = useState([10000]);
@@ -23,33 +26,11 @@ const Fullpage = () => {
     values,
     onChange: setValues,
   });
-  const [select, setSelect] = useState("impDivSelect");
-  const [xy1, setXy1] = useState(false);
-  const changeSelect = () => {
-    // const xy = true;
-    if (xy1 === false) {
-      setXy1(true);
-    } else {
-      setXy1(false);
-    }
-    if (xy1 === false) {
-      setSelect("impDivSelect1");
-    } else {
-      setSelect("impDivSelect");
-    }
+  const [state, setState] = useState("USDT");
+  const handleSelect = (e) => {
+    setState(e);
+    console.log(state);
   };
-  const data = [
-    { id: "1", h: "Tether ", p: "USDT" },
-    { id: "2", h: "USD Coin ", p: "USDC" },
-    { id: "3", h: "Binance USD ", p: "BUSD" },
-    { id: "4", h: "DAI ", p: "DAI" },
-    { id: "5", h: "UST ", p: "UST" },
-  ];
-  const passingVal = (eab) => {};
-  const passingVal1 = (eab) => {};
-  const passingVal2 = (eab) => {};
-  const passingVal3 = (eab) => {};
-  const passingVal4 = (eab) => {};
   return (
     <>
       <div
@@ -100,107 +81,74 @@ const Fullpage = () => {
                     <dl>
                       <dt>
                         {/* <input type="select" onclick={changeSelect}></input> */}
-                        <span
-                          className="drop dropdownMenu"
-                          onClick={changeSelect}
+                        <DropdownButton
+                          alignRight
+                          title={state}
+                          id="dropdown-menu-align-right"
+                          onSelect={handleSelect}
                         >
-                          USDT
-                          <div
-                            className={
-                              xy1 === false ? "impDivSelect" : "impDivSelect1"
-                            }
-                          >
-                            {/* <ul
-                              class="list-unstyled"
-                              // onClick={passingVal(data)}
+                          <Dropdown.Item eventKey="USDT">
+                            <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                              }}
                             >
-                              {value.map((val, index) => (
-                                <li
-                                  key={val.id}
-                                  // data-value="value 1"
-                                >
-                                  <div
-                                    onClick={passingVal(val, index)}
-                                    className="wda"
-                                    style={{
-                                      display: "flex",
-                                      justifyContent: "space-between",
-                                    }}
-                                  >
-                                    <h5>{val.h}</h5>
-                                    <p>{val.p}</p>
-                                  </div>
-                                </li>
-                              ))}
-                            </ul> */}
-                            <ul class="list-unstyled">
-                              <li onClick={passingVal("USDT")}>
-                                <div
-                                  className="wda"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <h5>Tether</h5>
-                                  <p>USDT</p>
-                                </div>
-                              </li>
-                              <li onClick={passingVal1("USDC")}>
-                                <div
-                                  className="wda"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <h5>USD Coin</h5>
-                                  <p>USDC</p>
-                                </div>
-                              </li>
-                              <li onClick={passingVal2("BUSD")}>
-                                <div
-                                  className="wda"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <h5>Binance USD</h5>
-                                  <p>BUSD</p>
-                                </div>
-                              </li>
-                              <li onClick={passingVal3("DAI")}>
-                                <div
-                                  className="wda"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <h5>DAI</h5>
-                                  <p>DAI</p>
-                                </div>
-                              </li>
-                              <li
-                                data-value="value 1"
-                                onClick={passingVal4("UST")}
-                              >
-                                <div
-                                  className="wda"
-                                  style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <h5>UST</h5>
-                                  <p>UST</p>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </span>
+                              <div className="zzz">Tether</div>
+                              <div className="zzz">USDT</div>
+                            </div>
+                          </Dropdown.Item>
 
+                          <Dropdown.Item eventKey="USDC">
+                            <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                              }}
+                            >
+                              <div className="zzz">USD Coin</div>
+                              <div className="zzz">USDC</div>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item eventKey="BUSD">
+                            <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                              }}
+                            >
+                              <div className="zzz">Binance USD</div>
+                              <div className="zzz">BUSD</div>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item eventKey="DAI">
+                            <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                              }}
+                            >
+                              <div className="zzz">DAI</div>
+                              <div className="zzz">DAI</div>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item eventKey="UST">
+                            <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                              }}
+                            >
+                              <div className="zzz">UST</div>
+                              <div className="zzz">UST</div>
+                            </div>
+                          </Dropdown.Item>
+                        </DropdownButton>
                         <small>Your Stablecoin</small>
                       </dt>
                       <dd style={{ display: "none" }}>
@@ -222,7 +170,7 @@ const Fullpage = () => {
                       </dt>
                       <dd id="interest_crypto">
                         <p>
-                          <span className="symbol">USDT</span>
+                          <span className="symbol">{state}</span>
                           <span className="amount">
                             {values == 1 ? 2000 : xy}
                           </span>
@@ -272,7 +220,7 @@ const Fullpage = () => {
 
                       <dd id="total">
                         <p>
-                          <span className="symbol">USDT</span>
+                          <span className="symbol">{state}</span>
                           <span className="amount">
                             {values == 1 ? cd : setVal + xy}
                           </span>

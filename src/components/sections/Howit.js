@@ -1,7 +1,8 @@
 import React from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-
+import img1 from "../../images/ico-tabs-01.png";
+import img2 from "../../images/ico-tabs-02.png";
 const Howit = () => {
   return (
     <>
@@ -27,9 +28,15 @@ const Howit = () => {
                       <div className="row">
                         <div className="col-2"></div>
                         <div className="col-3 text-center ">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
-                              <img src="img/ico-tabs-01.svg" alt="" />{" "}
+                              <img src={img1} alt="" />{" "}
                               <figcaption>
                                 You deposit your
                                 <br /> stablecoins with
@@ -45,9 +52,15 @@ const Howit = () => {
                           />
                         </div>
                         <div className="col-4 text-left">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
-                              <img src="img/ico-tabs-02.svg" alt="" />{" "}
+                              <img src={img2} alt="" />{" "}
                               <figcaption>
                                 You earn
                                 <br /> up to 20% with
@@ -59,7 +72,13 @@ const Howit = () => {
                       </div>
                       <div className="row">
                         <div className="col-3 text-center">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-03.svg" alt="" />{" "}
                               <figcaption>
@@ -77,7 +96,13 @@ const Howit = () => {
                           />
                         </div>
                         <div className="col-3 text-center">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-04.svg" alt="" />{" "}
                               <figcaption>
@@ -95,7 +120,13 @@ const Howit = () => {
                           />
                         </div>
                         <div className="col-3 text-center">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-05.svg" alt="" />{" "}
                               <figcaption>
@@ -121,7 +152,13 @@ const Howit = () => {
                       <div className="row">
                         <div className="col-2"></div>
                         <div className="col-3 text-center ">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-01.svg" alt="" />{" "}
                               <figcaption>
@@ -139,7 +176,13 @@ const Howit = () => {
                           />
                         </div>
                         <div className="col-4 text-left">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-06.svg" alt="" />{" "}
                               <figcaption>
@@ -153,7 +196,14 @@ const Howit = () => {
                       </div>
                       <div className="row">
                         <div className="col-3 text-center">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-07.svg" alt="" />{" "}
                               <figcaption>
@@ -171,7 +221,13 @@ const Howit = () => {
                           />
                         </div>
                         <div className="col-3 text-center">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-04.svg" alt="" />{" "}
                               <figcaption>
@@ -189,7 +245,13 @@ const Howit = () => {
                           />
                         </div>
                         <div className="col-3 text-center">
-                          <li>
+                          <li
+                            style={{
+                              textDecoration: "none",
+                              listStyleType: "none",
+                              marginTop: "20px",
+                            }}
+                          >
                             <figure>
                               <img src="img/ico-tabs-05.svg" alt="" />{" "}
                               <figcaption>

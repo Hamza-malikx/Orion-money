@@ -344,3 +344,6 @@ a {
 .nav a {
   text-decoration: none !important;
 }
+.partners-block ul li a {
+  text-decoration: none;
+}

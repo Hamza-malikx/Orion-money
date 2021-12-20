@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import About from "./sections/About";
 import Apylevel from "./sections/Apylevel";
 import Earlysupporters from "./sections/Earlysupporters";
@@ -37,9 +37,6 @@ const Fullpage = () => {
     } else {
       setSelect("impDivSelect");
     }
-    // console.log(xy1);
-
-    // console.log(select);
   };
   const data = [
     { id: "1", h: "Tether ", p: "USDT" },
@@ -48,24 +45,11 @@ const Fullpage = () => {
     { id: "4", h: "DAI ", p: "DAI" },
     { id: "5", h: "UST ", p: "UST" },
   ];
-  const passingVal = (eab) => {
-    console.log("XXX", eab);
-  };
-  const passingVal1 = (eab) => {
-    console.log("XXX", eab);
-  };
-  const passingVal2 = (eab) => {
-    console.log("XXX", eab);
-  };
-  const passingVal3 = (eab) => {
-    console.log("XXX", eab);
-  };
-  const passingVal4 = (eab) => {
-    console.log("XXX", eab);
-  };
-  // useEffect(() => {
-  //   passingVal();
-  // }, [value]);
+  const passingVal = (eab) => {};
+  const passingVal1 = (eab) => {};
+  const passingVal2 = (eab) => {};
+  const passingVal3 = (eab) => {};
+  const passingVal4 = (eab) => {};
   return (
     <>
       <div

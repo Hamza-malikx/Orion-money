@@ -156,10 +156,16 @@ a {
   text-decoration: none;
 }
 @media screen and (max-width: 1920px) and (min-width: 1440px) {
+  .container {
+    max-width: 1500px !important;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1750px) {
   .ab {
     position: absolute;
     top: 90%;
-    left: 11%;
+    left: 5%;
   }
 }
 .ab img {
@@ -215,7 +221,7 @@ a {
 }
 .content .main .text .btn {
   background-color: #00b069;
-  color: #fff;
+  color: #fff !important;
   min-width: 154px;
   padding: 14px 58px;
 }

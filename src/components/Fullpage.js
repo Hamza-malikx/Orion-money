@@ -36,18 +36,20 @@ const Fullpage = () => {
       <div
         className="section fp-section fp-table"
         data-anchor="anchor1"
-        style={{ height: "150px" }}
+        style={{ height: "10px" }}
       >
-        <a href="#block-01" className="ab">
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div>
-              <img src="img/scroll-down-icon.svg" alt="" />
+        <div className="container">
+          <a href="#block-01" className="ab">
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div>
+                <img src="img/scroll-down-icon.svg" alt="" />
+              </div>
+              <div>
+                <p>Scroll down</p>
+              </div>
             </div>
-            <div>
-              <p>Scroll down</p>
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
         <div className="fp-tableCell" style={{ height: "150px" }}>
           <div className="content">
             <div className="main">

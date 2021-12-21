@@ -294,4 +294,7 @@ label span {
     height: 135vh;
     padding-bottom: 150px !important;
   }
+  .humbergButton {
+    bottom: 30px !important;
+  }
 }

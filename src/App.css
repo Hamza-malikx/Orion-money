@@ -184,10 +184,13 @@ a {
   }
 }
 @media screen and (max-width: 499px) and (min-width: 300px) {
+  .raw-wrapper {
+    margin-top: 81px !important;
+  }
   .Wrapper {
     display: flex;
     flex-direction: column !important;
-    display: none !important;
+    /* display: none !important; */
   }
   .nav-item:nth-child(1) {
     margin-left: -163px !important;
@@ -285,12 +288,17 @@ a {
     margin-left: 25px;
   }
   #linkFive {
-    margin-left: 15px;
+    margin-left: 0px !important;
   }
 }
 @media screen and (max-width: 800px) and (min-width: 300px) {
+  .raw-wrapper {
+    margin-top: 81px !important;
+  }
   .orion-token-trade {
-    display: none !important;
+    /* display: none !important; */
+    text-align: center;
+    margin-left: 0 !important;
   }
   .yehn div .row:nth-child(1) {
     position: relative;
@@ -337,10 +345,13 @@ a {
   }
 }
 @media screen and (max-width: 759px) and (min-width: 500px) {
+  .raw-wrapper {
+    margin-top: 81px !important;
+  }
   .Wrapper {
-    display: none !important;
+    display: flex !important;
     flex-direction: column !important;
-    display: none !important;
+    /* display: none !important; */
   }
   .azab {
     margin-top: 220px !important;
@@ -417,10 +428,10 @@ a {
     margin-right: 0px;
   }
   .wrap div:nth-child(1) {
-    margin-left: 42px !important;
+    margin-left: 12px !important;
   }
   .wrap div:nth-child(2) {
-    margin-right: -50px !important;
+    margin-right: -10px !important;
   }
   .wrap div:nth-child(1) a img {
     width: 40px !important;
@@ -439,10 +450,10 @@ a {
     /* max-width: 1280px; */
   }
   #linkOne {
-    margin-left: 83px;
+    margin-left: 13px;
   }
   #linkTwo {
-    margin-left: 18px;
+    margin-left: 10px;
   }
   #linkThree {
     margin-left: 18px;
@@ -451,7 +462,7 @@ a {
     margin-left: 25px;
   }
   #linkFive {
-    margin-left: 15px;
+    margin-left: 0px !important;
   }
 }
 @media screen and (max-width: 999px) and (min-width: 760px) {
